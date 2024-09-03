@@ -21,7 +21,7 @@ export const CheckoutAddressForm: React.FC<Props> = ({ className }) => {
           name="address"
           render={({ field, fieldState }) => (
             <>
-              <AdressInput onChange={field.onChange} />
+              <AdressInput name="address" onChange={field.onChange} />
               {fieldState.error?.message && (
                 <ErrorText text={fieldState.error.message} />
               )}

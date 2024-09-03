@@ -40,6 +40,7 @@ export const CartDrawer: React.FC<React.PropsWithChildren<Props>> = ({
     const newQuantity = type === "plus" ? quantity + 1 : quantity - 1;
     updateItemQuantity(id, newQuantity);
   };
+
   return (
     <Sheet>
       <SheetTrigger asChild>{children}</SheetTrigger>

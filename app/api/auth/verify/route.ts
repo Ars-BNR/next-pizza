@@ -38,5 +38,9 @@ export async function GET(req: NextRequest) {
   } catch (error) {
     console.error(error);
     console.log("[VERIFY_GET] Server error", error);
+    return NextResponse.json(
+      { error: "Внутренняя ошибка сервера" },
+      { status: 500 }
+    );
   }
 }
